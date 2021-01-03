@@ -10,8 +10,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 500px;
-  margin: 50px auto 0;
+  width: 85%;
+  max-width: 980px;
+  margin: 100px auto 0;
 }
 #header-logo-container img {
   width: 38%;
@@ -19,6 +20,7 @@ body {
 }
 #header-logo-container svg {
   margin-top: 5%;
+  height: 100%;
 }
 #header-logo-container svg#w2 {
   margin-left: -3%;
@@ -28,20 +30,11 @@ body {
   opacity: 0;
 }
 
-.hr {
-  height: 3px;
-  width: 90%;
-  margin: 0 auto;
-  background: #E5E5E5;
-  max-width: 600px;
-}
-
 header {
   text-align: center;
   max-width: 750px;
   margin: 0 auto;
   position: relative;
-  padding: 35px 0;
 }
 header h1 {
   font-size: 1em;
@@ -56,7 +49,7 @@ header h1 {
 .nav a {
   text-transform: uppercase;
   color: #E5E5E5;
-  font-size: 1em;
+  font-size: 0.7em;
   text-decoration: none;
 }
 
@@ -64,44 +57,109 @@ span {
   font-family: "Playfair Display", serif;
 }
 
-.section.section-1 {
+.section.section-1, .section.section-3 {
   background: #AAB5B0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
   color: #191919;
   margin: 150px 0;
   align-items: center;
+  text-align: center;
 }
-.section.section-1 div {
+.section.section-1 div, .section.section-3 div {
+  padding-top: 10%;
+}
+.section.section-1 h1, .section.section-3 h1 {
+  font-size: 3em;
+  margin-top: 0;
+}
+.section.section-1 p, .section.section-3 p {
+  display: none;
+}
+.section.section-1 img, .section.section-3 img {
+  width: 80%;
+  margin: 5% 0 -15%;
+}
+.section.section-2 {
+  text-align: center;
+}
+.section.section-2 p {
   width: 85%;
+  font-size: 1.5em;
+  margin: 0 auto;
 }
-.section.section-1 h1 {
-  font-size: 3.5em;
+.section.section-2 img {
+  height: 130px;
+  margin-top: 35px;
 }
-.section.section-1 p {
+.section.section-2 h1 {
   font-size: 1.5em;
 }
-.section.section-1 img {
-  width: 70%;
-  margin: 10% 0 -10%;
+.section.section-3 {
+  background: #B55A4C;
+  color: #E5E5E5;
+}
+.section.section-3 div {
+  padding: 10%;
+}
+.section.section-3 h1 {
+  margin-top: 0.67em;
+}
+.section.section-3 p {
+  display: block;
+  font-size: 1.5em;
+}
+.section.section-3 img {
+  margin: -15% 0 0;
 }
 
+@media screen and (min-width: 576px) {
+  .section.section-1 img, .section.section-3 img {
+    width: 60%;
+    margin-bottom: -10%;
+  }
+}
 @media screen and (min-width: 768px) {
   header h1 {
+    font-size: 1.2em;
+  }
+
+  .nav {
+    font-size: 1.2em;
+  }
+
+  .section.section-1, .section.section-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    text-align: left;
+  }
+  .section.section-1 div, .section.section-3 div {
+    width: 85%;
+  }
+  .section.section-1 h1, .section.section-3 h1 {
+    font-size: 6vw;
+  }
+  .section.section-1 p, .section.section-3 p {
+    display: block;
+    font-size: 1.5em;
+  }
+  .section.section-1 img, .section.section-3 img {
+    width: 80%;
+    margin-top: 10%;
+  }
+  .section.section-2 div {
+    display: none;
+  }
+  .section.section-3 img {
+    margin: -15% 0 10%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .section.section-1 p {
     font-size: 2em;
   }
 
   .nav {
     font-size: 1.5em;
-  }
-}
-@media screen and (min-width: 992px) {
-  .section.section-1 h1 {
-    font-size: 4em;
-  }
-  .section.section-1 p {
-    font-size: 2em;
   }
 }
 
