@@ -1,32 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Playfair+Display:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,800&display=swap");
 body {
   background: #191919;
   color: #E5E5E5;
   font-family: "Lato", sans-serif;
+  overflow-x: hidden;
 }
 
 #header-logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 85%;
-  max-width: 980px;
-  margin: 100px auto 0;
+  position: absolute;
+  width: 82%;
+  height: 30px;
+  top: 45%;
+  margin-left: -2%;
 }
 #header-logo-container img {
   width: 38%;
   animation-delay: 1s;
 }
-#header-logo-container svg {
-  margin-top: 5%;
-  height: 100%;
-}
 #header-logo-container svg#w2 {
   margin-left: -3%;
 }
 
-.content-container {
+.fade-in {
   opacity: 0;
 }
 
@@ -42,9 +41,9 @@ header h1 {
 
 .nav {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   justify-items: center;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 .nav a {
   text-transform: uppercase;
@@ -55,109 +54,120 @@ header h1 {
 
 span {
   font-family: "Playfair Display", serif;
+  font-style: italic;
 }
 
-.section.section-1, .section.section-3 {
-  background: #AAB5B0;
-  color: #191919;
-  margin: 150px 0;
+.section.section-1 {
+  display: flex;
   align-items: center;
-  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10%;
+  font-size: 1.5em;
 }
-.section.section-1 div, .section.section-3 div {
-  padding-top: 10%;
+.section.section-1 div {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  max-width: 590px;
+  overflow: hidden;
 }
-.section.section-1 h1, .section.section-3 h1 {
-  font-size: 3em;
-  margin-top: 0;
+.section.section-1 div small {
+  font-size: 50%;
+  text-align: right;
+  position: relative;
+  margin-right: 20px;
 }
-.section.section-1 p, .section.section-3 p {
-  display: none;
-}
-.section.section-1 img, .section.section-3 img {
-  width: 80%;
-  margin: 5% 0 -15%;
+.section.section-1 div small:before {
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 1px;
+  width: 100%;
+  right: 125px;
+  top: 8px;
 }
 .section.section-2 {
+  margin: 150px 0;
   text-align: center;
 }
-.section.section-2 p {
-  width: 85%;
-  font-size: 1.5em;
-  margin: 0 auto;
-}
 .section.section-2 img {
-  height: 130px;
-  margin-top: 35px;
+  width: 35%;
+}
+.section.section-2 img.img-1, .section.section-2 img.img-3 {
+  margin-bottom: -15%;
+}
+.section.section-2 img.img-1 {
+  margin-right: -10%;
+}
+.section.section-2 img.img-3 {
+  margin-left: -10%;
 }
 .section.section-2 h1 {
+  margin-top: 20%;
   font-size: 1.5em;
+  font-weight: 100;
+}
+.section.section-2 h1 span {
+  font-style: inherit;
 }
 .section.section-3 {
   background: #B55A4C;
   color: #E5E5E5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5% 0;
+  text-align: center;
 }
 .section.section-3 div {
-  padding: 10%;
-}
-.section.section-3 h1 {
-  margin-top: 0.67em;
+  width: 100%;
+  max-width: 590px;
 }
 .section.section-3 p {
   display: block;
   font-size: 1.5em;
 }
-.section.section-3 img {
-  margin: -15% 0 0;
+
+footer {
+  padding: 45px;
+  position: relative;
+}
+footer img {
+  height: 100px;
+}
+footer p {
+  position: absolute;
+  bottom: 0;
+  right: 45px;
+}
+footer div {
+  position: absolute;
+  right: 45px;
+  bottom: 50px;
+}
+footer div img {
+  height: 30px;
+  margin-left: 15px;
 }
 
-@media screen and (min-width: 576px) {
-  .section.section-1 img, .section.section-3 img {
-    width: 60%;
-    margin-bottom: -10%;
-  }
-}
 @media screen and (min-width: 768px) {
-  header h1 {
-    font-size: 1.2em;
-  }
-
   .nav {
     font-size: 1.2em;
   }
 
-  .section.section-1, .section.section-3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    text-align: left;
+  .section.section-1 {
+    font-size: 2em;
   }
-  .section.section-1 div, .section.section-3 div {
-    width: 85%;
+  .section.section-1 div small {
+    margin-right: 45px;
   }
-  .section.section-1 h1, .section.section-3 h1 {
-    font-size: 6vw;
-  }
-  .section.section-1 p, .section.section-3 p {
-    display: block;
-    font-size: 1.5em;
-  }
-  .section.section-1 img, .section.section-3 img {
-    width: 80%;
-    margin-top: 10%;
-  }
-  .section.section-2 div {
-    display: none;
-  }
-  .section.section-3 img {
-    margin: -15% 0 10%;
+  .section.section-1 div small:before {
+    right: 165px;
   }
 }
 @media screen and (min-width: 992px) {
-  .section.section-1 p {
-    font-size: 2em;
-  }
-
   .nav {
     font-size: 1.5em;
   }
