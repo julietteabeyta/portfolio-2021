@@ -14,7 +14,7 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
-axios.get('https://cdn.contentful.com/spaces/byf0bul9fo7u/environments/master/entries?access_token=miSPf0RSOBRs8NxqQRVHHbdF_no4YjnCUHF4z2uxMW0&content_type=lessonImage')
+axios.get('https://cdn.contentful.com/spaces/{space_id}/environments/master/entries?access_token={access_token}&content_type=lessonImage')
   .then(function (response) {
     console.log('response ', response);
     document.getElementById('archive-container').innerHTML = response.data.includes && response.data.includes.Asset
