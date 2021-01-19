@@ -4,11 +4,7 @@ export default function Footer() {
       <footer className="fade-in">
         <img src="/WRWG.png" alt="WRWG"></img>
         <p>©2020</p>
-        <div>
-          <img src="/instagram-logo.png" alt="Instagram Logo"></img>
-          <img src="/shop-logo.png" alt="Shopping cart icon"></img>
-          <img src="/email-logo.png" alt="Envelope icon"></img>
-        </div>
+        <a href="https://www.instagram.com/whatrhymeswithgod/"><span>instagram</span></a>
       </footer>
     </>
   )
