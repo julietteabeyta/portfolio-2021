@@ -3,12 +3,13 @@
 :root {
   --primary-color: #191919;
   --overlay-color: rgba(170, 181, 176 , 0.95);
+  --light-color: #E5E5E5;
   --menu-speed: 0.75s;
 }
 
 body {
   background: var(--primary-color);
-  color: #E5E5E5;
+  color: var(--light-color);
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
 }
@@ -100,7 +101,7 @@ header h1 {
   flex: none;
   width: 100%;
   height: 2px;
-  background: #fff;
+  background: var(--light-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,7 +148,7 @@ header h1 {
 
 .menu-wrap .toggler:checked ~ .menu > div > div {
   opacity: 1;
-  transition: opacity 0.4s ease 0.4s;
+  transition: opacity 0.4s ease;
 }
 
 .menu-wrap .menu {
@@ -189,7 +190,7 @@ header h1 {
 
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
-  color: #fff;
+  color: var(--light-color);
   font-size: 2rem;
   padding: 1rem;
 }
@@ -198,6 +199,36 @@ header h1 {
   color: inherit;
   text-decoration: none;
   transition: color 0.4s ease;
+  position: relative;
+  display: inline-block;
+  padding: 0;
+}
+.menu-wrap .menu > div > div > ul > li > a:before, .menu-wrap .menu > div > div > ul > li > a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1.5px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: var(--light-color);
+}
+.menu-wrap .menu > div > div > ul > li > a:before {
+  left: 0px;
+}
+.menu-wrap .menu > div > div > ul > li > a:after {
+  right: 0px;
+  background: var(--light-color);
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.menu-wrap .menu > div > div > ul > li > a:hover:before {
+  background: var(--light-color);
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.menu-wrap .menu > div > div > ul > li > a:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
 }
 
 span {
@@ -229,7 +260,7 @@ span {
 .section.section-1 div small:before {
   content: "";
   position: absolute;
-  background-color: white;
+  background-color: var(--light-color);
   height: 1px;
   width: 100%;
   right: 125px;

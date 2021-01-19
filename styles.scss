@@ -5,12 +5,13 @@
 :root {
   --primary-color: #191919;
   --overlay-color: rgba(170, 181, 176 , 0.95);
+  --light-color: #E5E5E5;
   --menu-speed: 0.75s;
 }
 
 body {
   background: var(--primary-color);
-  color: #E5E5E5;
+  color: var(--light-color);
   font-family: 'Lato', sans-serif;
   overflow-x: hidden;
 }
@@ -103,7 +104,7 @@ header {
   flex: none;
   width: 100%;
   height: 2px;
-  background: #fff;
+  background: var(--light-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,7 +151,7 @@ header {
 
 .menu-wrap .toggler:checked ~ .menu > div > div {
   opacity: 1;
-  transition:  opacity 0.4s ease 0.4s;
+  transition:  opacity 0.4s ease;
 }
 
 .menu-wrap .menu {
@@ -193,7 +194,7 @@ header {
 
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
-  color: #fff;
+  color: var(--light-color);
   font-size: 2rem;
   padding: 1rem;
 }
@@ -202,6 +203,39 @@ header {
   color: inherit;
   text-decoration: none;
   transition: color 0.4s ease;
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1.5px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: var(--light-color);
+  }
+  
+  &:before {
+    left: 0px;
+  }
+  &:after {
+    right: 0px;
+    background: var(--light-color);
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  
+  &:hover:before {
+    background: var(--light-color);
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  
+  &:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
+  }
 }
 
 
@@ -232,7 +266,7 @@ span {
         &:before {
           content: '';
           position: absolute;
-          background-color: white;
+          background-color: var(--light-color);
           height: 1px;
           width: 100%;
           right: 125px;
