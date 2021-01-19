@@ -10,8 +10,14 @@ import ArchiveImage from '@components/ArchiveImage'
 
 export default function Archive({ posts }) {
   useEffect(() => {
-    anime({
+    anime.timeline().add({
       targets: '.fade-in',
+      opacity: [0,1],
+      easing: 'linear',
+      duration: 0,
+    })
+    .add({
+      targets: '.posts',
       opacity: [0,1],
       easing: 'linear',
       duration: 1000,
@@ -24,9 +30,9 @@ export default function Archive({ posts }) {
       </Head>
       <main>
         <Header />
-        <div className="fade-in">
-          {posts.map((p) => {
-            return <ArchiveImage key={p.date} date={p.date} image={p.image.fields} title={p.title} />
+        <div className="posts">
+          {posts.map((p, index) => {
+            return <ArchiveImage key={index} date={p.date} image={p.image.fields} title={p.title} />
           })}
         </div>
       </main>

@@ -14,7 +14,7 @@ export default function Home() {
         translateZ: 0,
         opacity: [0,1],
         easing: 'easeOutExpo',
-        duration: 1000,
+        duration: 800,
         delay: (el, i) => 600 + 100 * i
       })
       .add({
@@ -22,7 +22,7 @@ export default function Home() {
         opacity: [0,1],
         easing: 'linear',
         duration: 1000,
-      }, 500);
+      }, 200);
 
     window.onbeforeunload = function () {
       window.scrollTo(0, 0);
@@ -48,7 +48,6 @@ export default function Home() {
             <img src="collage-1.png" alt="Collage 1" className="img-1"></img>
             <img src="collage-2.jpg" alt="Collage 2" className="img-2"></img>
             <img src="collage-3.png" alt="Collage 3" className="img-3"></img>
-            <h1 ><span >CREATED WITH PURPOSE AND INTENTION</span></h1>
           </div>
           <div className="section section-3">
             <div>

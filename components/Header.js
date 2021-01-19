@@ -19,7 +19,7 @@ export default function Header() {
         </div>
       </a>
       <a href="#" className="fade-in">Shop</a>
-      <a href="https://teespring.com/stores/my-store-10281756" className="fade-in">Merch</a>
+      <a href="https://teespring.com/stores/my-store-10281756" target="_blank" className="fade-in">Merch</a>
       <a href="#" className="fade-in">About</a>
       <a href="/archive" className="fade-in">Archive</a>
       <a href="#" className="fade-in">Contact</a>
