@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import Head from 'next/head'
+import anime from 'animejs';
 
 import { getcontent } from '@utils/getcontent'
 
@@ -7,7 +9,14 @@ import Footer from '@components/Footer'
 import ArchiveImage from '@components/ArchiveImage'
 
 export default function Archive({ posts }) {
-  console.log('what are our posts ', posts);
+  useEffect(() => {
+    anime({
+      targets: '.fade-in',
+      opacity: [0,1],
+      easing: 'linear',
+      duration: 1000,
+    });
+  });
   return (
     <div className="container">
       <Head>
@@ -15,7 +24,7 @@ export default function Archive({ posts }) {
       </Head>
       <main>
         <Header />
-        <div className="posts">
+        <div className="fade-in">
           {posts.map((p) => {
             return <ArchiveImage key={p.date} date={p.date} image={p.image.fields} title={p.title} />
           })}

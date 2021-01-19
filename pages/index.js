@@ -1,38 +1,33 @@
+import { useEffect } from 'react';
 import Head from 'next/head'
-import anime from 'animejs/lib/anime.es.js';
+import anime from 'animejs';
 
 import Header from '@components/Header'
 import Footer from '@components/Footer'
 
 export default function Home() {
-  anime.timeline()
-    .add({
-      targets: 'svg, #header-logo-container img',
-      translateY: [100,0],
-      translateZ: 0,
-      opacity: [0,1],
-      easing: 'easeOutExpo',
-      duration: 1500,
-      delay: (el, i) => 600 + 100 * i
-    })
-    .add({
-      targets: '#header-logo-container',
-      postition: 'relative',
-      width: '100px',
-      top: '25px',
-      easing: 'easeOutBounce',
-      duration: 1000,
-    })
-    .add({
-      targets: '.fade-in',
-      opacity: [0,1],
-      easing: 'linear',
-      duration: 1000,
-    });
+  useEffect(() => {
+    anime.timeline()
+      .add({
+        targets: 'svg, #header-logo-container img',
+        translateY: [50,0],
+        translateZ: 0,
+        opacity: [0,1],
+        easing: 'easeOutExpo',
+        duration: 1000,
+        delay: (el, i) => 600 + 100 * i
+      })
+      .add({
+        targets: '.fade-in',
+        opacity: [0,1],
+        easing: 'linear',
+        duration: 1000,
+      }, 500);
 
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+  });
 
   return (
     <>
