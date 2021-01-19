@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,800&display=swap");
+:root {
+  --primary-color: #191919;
+  --overlay-color: rgba(170, 181, 176 , 0.95);
+  --menu-speed: 0.75s;
+}
+
 body {
-  background: #191919;
+  background: var(--primary-color);
   color: #E5E5E5;
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
@@ -19,7 +25,6 @@ a {
   width: 100px;
   height: 30px;
   top: 25px;
-  margin-left: -2%;
 }
 #header-logo-container img {
   width: 38%;
@@ -45,15 +50,154 @@ header h1 {
 
 .nav {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   margin-top: 25px;
 }
 .nav a {
+  justify-self: start;
   margin-top: 5px;
   text-transform: uppercase;
-  font-size: 0.7em;
+  font-size: 2rem;
   text-decoration: none;
+  padding-left: 1rem;
+}
+
+.menu-wrap {
+  position: relative;
+  z-index: 1;
+  margin-top: -15px;
+  justify-self: end;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+  padding: 1rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-wrap .menu ul {
+  padding: 0;
+}
+
+.menu-wrap .menu > div {
+  background: var(--overlay-color);
+  border-radius: 50%;
+  width: 250vw;
+  height: 250vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
 }
 
 span {
@@ -153,6 +297,7 @@ footer {
 footer img {
   height: 40px;
   margin-top: -20px;
+  padding-left: 1rem;
 }
 footer > p {
   justify-self: center;
@@ -160,6 +305,7 @@ footer > p {
 }
 footer a {
   justify-self: end;
+  padding-right: 1rem;
 }
 
 @media screen and (min-width: 500px) {
@@ -188,10 +334,6 @@ footer a {
   }
 }
 @media screen and (min-width: 768px) {
-  .nav {
-    font-size: 1.2em;
-  }
-
   .section.section-1 {
     font-size: 2em;
   }
@@ -208,11 +350,6 @@ footer a {
     height: 420px;
     width: 420px;
     padding: 65px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .nav {
-    font-size: 1.5em;
   }
 }
 

@@ -18,11 +18,23 @@ export default function Header() {
           </svg>
         </div>
       </a>
-      <a href="/" className="fade-in">Shop</a>
-      <a href="https://teespring.com/stores/my-store-10281756" target="_blank" className="fade-in">Merch</a>
-      <a href="/about" className="fade-in">About</a>
-      <a href="/archive" className="fade-in">Archive</a>
-      <a href="/contact" className="fade-in">Contact</a>
+      <div class="menu-wrap">
+        <input type="checkbox" class="toggler"/>
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+          <div>
+            <div>
+              <ul>
+                <li><a href="/" className="fade-in">Shop</a></li>
+                <li><a href="https://teespring.com/stores/my-store-10281756" target="_blank" className="fade-in">Merch</a></li>
+                <li><a href="/about" className="fade-in">About</a></li>
+                <li><a href="/archive" className="fade-in">Archive</a></li>
+                <li><a href="/contact" className="fade-in">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
