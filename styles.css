@@ -203,33 +203,6 @@ header h1 {
   display: inline-block;
   padding: 0;
 }
-.menu-wrap .menu > div > div > ul > li > a:before, .menu-wrap .menu > div > div > ul > li > a:after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 1.5px;
-  top: 50%;
-  margin-top: -0.5px;
-  background: var(--light-color);
-}
-.menu-wrap .menu > div > div > ul > li > a:before {
-  left: 0px;
-}
-.menu-wrap .menu > div > div > ul > li > a:after {
-  right: 0px;
-  background: var(--light-color);
-  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-.menu-wrap .menu > div > div > ul > li > a:hover:before {
-  background: var(--light-color);
-  width: 100%;
-  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-.menu-wrap .menu > div > div > ul > li > a:hover:after {
-  background: transparent;
-  width: 100%;
-  transition: 0s;
-}
 
 span {
   font-family: "Playfair Display", serif;
@@ -340,6 +313,34 @@ footer a {
 }
 
 @media screen and (min-width: 500px) {
+  .menu-wrap .menu > div > div > ul > li > a:before, .menu-wrap .menu > div > div > ul > li > a:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1.5px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: var(--light-color);
+  }
+  .menu-wrap .menu > div > div > ul > li > a:before {
+    left: 0px;
+  }
+  .menu-wrap .menu > div > div > ul > li > a:after {
+    right: 0px;
+    background: var(--light-color);
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  .menu-wrap .menu > div > div > ul > li > a:hover:before {
+    background: var(--light-color);
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  .menu-wrap .menu > div > div > ul > li > a:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
+  }
+
   .section.section-3 div {
     height: 380px;
     width: 380px;
@@ -351,7 +352,7 @@ footer a {
     cursor: url(https://ani.cursors-4u.net/symbols/sym-9/sym831.ani), url(https://ani.cursors-4u.net/symbols/sym-9/sym831.png), default !important;
   }
   .section.section-3 div a {
-    transition: all 0.2s ease;
+    transition: all 0.05s ease;
     cursor: url(https://ani.cursors-4u.net/symbols/sym-9/sym831.ani), url(https://ani.cursors-4u.net/symbols/sym-9/sym831.png), default !important;
   }
   .section.section-3 div a:hover {

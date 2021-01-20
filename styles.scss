@@ -206,38 +206,7 @@ header {
   position: relative;
   display: inline-block;
   padding: 0;
-  &:before, &:after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 1.5px;
-    top: 50%;
-    margin-top: -0.5px;
-    background: var(--light-color);
-  }
-  
-  &:before {
-    left: 0px;
-  }
-  &:after {
-    right: 0px;
-    background: var(--light-color);
-    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-  }
-  
-  &:hover:before {
-    background: var(--light-color);
-    width: 100%;
-    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-  }
-  
-  &:hover:after {
-    background: transparent;
-    width: 100%;
-    transition: 0s;
-  }
 }
-
 
 span {
   font-family: 'Playfair Display', serif;
@@ -351,6 +320,38 @@ footer {
 }
 
 @media screen and (min-width: 500px) {
+  .menu-wrap .menu > div > div > ul > li > a {
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1.5px;
+      top: 50%;
+      margin-top: -0.5px;
+      background: var(--light-color);
+    }
+    
+    &:before {
+      left: 0px;
+    }
+    &:after {
+      right: 0px;
+      background: var(--light-color);
+      transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    
+    &:hover:before {
+      background: var(--light-color);
+      width: 100%;
+      transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    
+    &:hover:after {
+      background: transparent;
+      width: 100%;
+      transition: 0s;
+    }
+  }
   .section {
     &.section-3 {
       div {
@@ -363,7 +364,7 @@ footer {
           cursor: url(https://ani.cursors-4u.net/symbols/sym-9/sym831.ani), url(https://ani.cursors-4u.net/symbols/sym-9/sym831.png), default !important;
         }
         a {
-          transition: all .2s ease;
+          transition: all .05s ease;
           cursor: url(https://ani.cursors-4u.net/symbols/sym-9/sym831.ani), url(https://ani.cursors-4u.net/symbols/sym-9/sym831.png), default !important;
           &:hover {
             color: #E5E5E5;

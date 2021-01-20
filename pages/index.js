@@ -46,7 +46,7 @@ export default function Home() {
             <img src="collage-3.png" alt="Collage 3" className="img-3"></img>
           </div>
           <div className="section section-3">
-            <div className="asdf">
+            <div>
               <h1><span >Meet us!</span></h1>
               <p>We are <span >Neek & Junie</span> and we are here to make your super neat-o retro
                 art dreams come true. Learn more about us and <span>WRWG</span> over {' '}
