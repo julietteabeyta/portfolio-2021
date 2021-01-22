@@ -1,9 +1,7 @@
 import { useEffect } from 'react';
-import Head from 'next/head'
 import anime from 'animejs';
 
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import Layout from 'layouts/layout';
 
 export default function Home() {
   useEffect(() => {
@@ -16,23 +14,12 @@ export default function Home() {
         easing: 'easeOutExpo',
         duration: 800,
         delay: (el, i) => 600 + 100 * i
-      })
-      .add({
-        targets: '.fade-in',
-        opacity: [0,1],
-        easing: 'linear',
-        duration: 1000,
-      }, 200);
+      });
   });
 
   return (
-    <>
-      <Head>
-        <title>WRWG</title>
-      </Head>
-      <main>
-        <Header/>
-        <div className="content-container fade-in">
+    <Layout>
+        <div className="content-container">
           <div className="section section-1">
             <div>
               <p>Creating analog art with a <span>story to tell.</span> Our pieces explore elaborate
@@ -54,8 +41,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      <Footer />
-      </main>
-    </>
-  )
+    </Layout>
+  );
 }
