@@ -29,7 +29,7 @@ export default function Home() {
           </div>
           <div className="section section-2">
             <img src="collage-1.png" alt="Collage 1" className="img-1"></img>
-            <img src="collage-2.jpg" alt="Collage 2" className="img-2"></img>
+            <img src="collage-2.png" alt="Collage 2" className="img-2"></img>
             <img src="collage-3.png" alt="Collage 3" className="img-3"></img>
           </div>
           <div className="section section-3">
