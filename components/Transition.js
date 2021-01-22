@@ -33,7 +33,6 @@ function Transition (props) {
           in={inProp}
         >
           {status => {
-            console.log('status ', status);
             return (
             <div style={{ ...defaultStyle, ...getTransitionStyles[status] }}>{children}</div>
           )}}

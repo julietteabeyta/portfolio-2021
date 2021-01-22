@@ -19,7 +19,6 @@ const Layout = ({ children, location }) => {
         </Transition>
         <Footer />
       </main>
-      <script></script>
     </ Fragment>
   )
 }
