@@ -22,7 +22,7 @@ export default function Home() {
           </div>
           <div>
             <img src="junie.jpg" alt="Selfie of Junie" /><p><span>Junie </span> is a Los Angeles-based full-time software engineer & sweetie pie who handles
-            all of the merch design and business management for WRWG. They have a passion for creative operation in myriad mediums and function to add 
+            all of the merch design and business management for WRWG. They have a passion for creative operation in myriad mediums and work to add 
             dimension to the functions of this studio. Outside of slinging code, Junie enjoys reading, cooking good vegan food, and dabbling in piano playing.</p>
             <a href="https://www.instagram.com/juneauwhoa/?hl=en" target="_blank"><img src="instagram-logo.png" alt="instagram logo" /></a>
             <a href="https://www.juliette.dev/" target="_blank"><img style={{ filter: 'invert(1)' }} src="website-logo.png" alt="world wide web icon" /></a>
