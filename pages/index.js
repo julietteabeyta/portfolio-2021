@@ -16,7 +16,9 @@ export default function Home() {
         duration: 800,
         delay: (el, i) => 600 + 100 * i
       });
-      setOpacity(1);
+      setTimeout(() => {
+        setOpacity(1);
+      }, 800);
   });
 
   return (
