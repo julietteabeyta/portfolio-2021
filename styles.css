@@ -387,7 +387,8 @@ footer {
   grid-template-columns: 1fr 1fr 1fr;
   font-size: 0.8em;
   width: 100%;
-  margin-top: -50px;
+  margin: -50px auto 0;
+  max-width: 930px;
 }
 footer img {
   height: 40px;
@@ -514,6 +515,10 @@ footer a {
 
   .nav a {
     padding-left: 0;
+  }
+
+  footer img, footer a {
+    padding: 0;
   }
 }
 
