@@ -1,24 +1,29 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import anime from 'animejs';
 
 import Layout from 'layouts/layout';
 
 export default function Home() {
-  const [opacity, setOpacity] = useState(0);
   useEffect(() => {
-    setTimeout(() => {
-      // anime.timeline()
-      //   .add({
-      //     targets: 'svg, #header-logo-container img',
-      //     translateY: [50,0],
-      //     translateZ: 0,
-      //     opacity: [0,1],
-      //     easing: 'easeOutExpo',
-      //     duration: 800,
-      //     delay: (el, i) => 600 + 100 * i
-      //   });
-        setOpacity(1);
-      }, 800);
+    anime.timeline()
+      .add({
+        targets: 'svg, #header-logo-container img',
+        translateY: [50,0],
+        translateZ: 0,
+        opacity: [0,1],
+        easing: 'easeOutExpo',
+        duration: 800,
+        delay: (el, i) => 600 + 100 * i
+      })
+      .add({
+        targets: '.collage',
+        translateY: [50,0],
+        translateZ: 0,
+        opacity: [0,1],
+        easing: 'easeInExpo',
+        duration: 800,
+        delay: (el, i) => 600 + 100 * i
+      }, 0);
   });
 
   return (
@@ -32,9 +37,9 @@ export default function Home() {
             </div>
           </div>
           <div className="section section-2">
-            <img style={{ opacity }} src="collage-1.png" alt="Collage 1" className="img-1"></img>
-            <img style={{ opacity }} src="collage-2.png" alt="Collage 2" className="img-2"></img>
-            <img style={{ opacity }} src="collage-3.png" alt="Collage 3" className="img-3"></img>
+            <img src="collage-1.png" alt="Collage 1" className="img-1 collage"></img>
+            <img src="collage-2.png" alt="Collage 2" className="img-2 collage"></img>
+            <img src="collage-3.png" alt="Collage 3" className="img-3 collage"></img>
           </div>
           <div className="section section-3">
             <div>
