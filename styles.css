@@ -253,8 +253,8 @@ span {
   font-size: 1.1rem;
 }
 .about-section .about-container div {
-  padding: 15px;
-  width: 75%;
+  padding: 0 45px 0 50px;
+  width: 90%;
 }
 .about-section .about-container img {
   height: auto;
@@ -455,6 +455,9 @@ footer a {
     padding: 35px;
     font-size: 1.5em;
   }
+  .about-section .about-container div {
+    width: 75%;
+  }
 }
 @media screen and (min-width: 768px) {
   .section.section-1 {
@@ -482,6 +485,7 @@ footer a {
     align-items: start;
   }
   .about-section .about-container div {
+    padding: 15px;
     width: 50%;
   }
   .about-section > div {
