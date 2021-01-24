@@ -5,18 +5,18 @@ import Layout from 'layouts/layout';
 
 export default function Home() {
   const [opacity, setOpacity] = useState(0);
-  setTimeout(() => {
-    useEffect(() => {
-      anime.timeline()
-        .add({
-          targets: 'svg, #header-logo-container img',
-          translateY: [50,0],
-          translateZ: 0,
-          opacity: [0,1],
-          easing: 'easeOutExpo',
-          duration: 800,
-          delay: (el, i) => 600 + 100 * i
-        });
+  useEffect(() => {
+    setTimeout(() => {
+      // anime.timeline()
+      //   .add({
+      //     targets: 'svg, #header-logo-container img',
+      //     translateY: [50,0],
+      //     translateZ: 0,
+      //     opacity: [0,1],
+      //     easing: 'easeOutExpo',
+      //     duration: 800,
+      //     delay: (el, i) => 600 + 100 * i
+      //   });
         setOpacity(1);
       }, 800);
   });
