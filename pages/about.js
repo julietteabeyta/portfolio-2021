@@ -8,7 +8,7 @@ export default function Home() {
         <div className="about-header">
           <p><span>What Rhymes With God</span> is a collage studio based out of Denver, Colorado and Los Angeles, California.
           We are in the process of building our business and brand, all while creating beautiful, meaningful pieces perfect for
-          home decoration, gift-giving, and personal and political expression.</p>
+          home decoration, gift-giving, and personal & political expression.</p>
         </div>
         <div className="about-container">
           <div>
