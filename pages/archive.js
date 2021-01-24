@@ -1,4 +1,5 @@
 import { getcontent } from '@utils/getcontent'
+import anime from 'animejs';
 
 import ArchiveImage from '@components/ArchiveImage'
 import Layout from 'layouts/layout';
@@ -12,6 +13,14 @@ export default function Archive({ posts }) {
       setWindowWidth(window.innerWidth);
       window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
     }
+    anime.timeline()
+      .add({
+        targets: '.collage',
+        opacity: [0,1],
+        easing: 'easeInExpo',
+        duration: 800,
+        delay: (el, i) => 600
+      });
   });
 
   return (

@@ -22,7 +22,7 @@ export default function Home() {
         opacity: [0,1],
         easing: 'easeInExpo',
         duration: 800,
-        delay: (el, i) => 600 + 100 * i
+        delay: (el, i) => 600 + 200 * i
       }, 0);
   });
 
