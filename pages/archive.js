@@ -2,14 +2,64 @@ import { getcontent } from '@utils/getcontent'
 
 import ArchiveImage from '@components/ArchiveImage'
 import Layout from 'layouts/layout';
+import { Fragment, useEffect, useState } from 'react';
 
 export default function Archive({ posts }) {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    if (window) {
+      setWindowWidth(window.innerWidth);
+      window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
+    }
+  });
+
   return (
     <Layout>
       <div className="posts">
-        {posts.map((p, index) => {
-          return <ArchiveImage key={index} date={p.date} image={p.image.fields} title={p.title} />
-        })}
+        {windowWidth < 768
+          && <Fragment>
+            <div>
+              {posts.map((p, index) => {
+                if (index%2 === 0) {
+                  return <ArchiveImage key={index} date={p.date} image={p.image.fields} title={p.title} />
+                }
+              })}
+            </div>
+            <div>
+              {posts.map((p, index) => {
+                if (index%2 !== 0) {
+                  return <ArchiveImage key={index} date={p.date} image={p.image.fields} title={p.title} />
+                }
+              })}
+            </div>
+          </Fragment>
+        }
+        {windowWidth > 768
+          && <Fragment>
+            <div>
+              {posts.map((p, index) => {
+                if (index%3 === 0) {
+                  return <ArchiveImage key={index} date={p.date} image={p.image.fields} title={p.title} />
+                }
+              })}
+            </div>
+            <div>
+              {posts.map((p, index) => {
+                if (index%3 !== 0 && index%2 === 0) {
+                  return <ArchiveImage key={index} date={p.date} image={p.image.fields} title={p.title} />
+                }
+              })}
+            </div>
+            <div>
+              {posts.map((p, index) => {
+                if (index%3 !== 0 && index%2 !== 0) {
+                  return <ArchiveImage key={index} date={p.date} image={p.image.fields} title={p.title} />
+                }
+              })}
+            </div>
+          </Fragment>
+        }
       </div>
     </Layout>
   )
