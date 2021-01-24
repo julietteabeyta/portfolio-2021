@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <div className="nav content-container">
+    <div className="nav">
       <Link href="/">
         <a>
           <div id="header-logo-container">

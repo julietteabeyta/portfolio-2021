@@ -13,12 +13,12 @@ const Layout = ({ children, location }) => {
       </Head>
       {/* <div className="blm"><a href="https://secure.actblue.com/donate/ms_blm_homepage_2019"><span>BLACK LIVES MATTER</span></a> {' '} NO JUSTICE, NO PEACE.</div> */}
       <main>
-        <Header/>
-        <Transition location={location}>
-          {children}
-        </Transition>
-        <Footer />
+          <Header/>
+          <Transition location={location}>
+            {children}
+          </Transition>
       </main>
+      <Footer />
     </ Fragment>
   )
 }

@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <Layout>
-        <div className="content-container">
+        <div>
           <div className="section section-1">
             <div>
               <p>Creating analog art with a <span>story to tell.</span> Our pieces explore elaborate

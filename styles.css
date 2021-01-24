@@ -7,11 +7,27 @@
   --menu-speed: 0.75s;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   background: var(--primary-color);
   color: var(--light-color);
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
+}
+body > div {
+  height: 100%;
+}
+
+main {
+  margin-top: -25px;
+  min-height: 100%;
+  position: relative;
+}
+main > div {
+  margin-bottom: 50px;
 }
 
 a {
@@ -50,6 +66,7 @@ header h1 {
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   margin-top: 25px;
+  height: 80px;
 }
 .nav a {
   justify-self: start;
@@ -69,7 +86,7 @@ header h1 {
 
 .menu-wrap .toggler {
   position: absolute;
-  top: 0;
+  top: 25px;
   right: 0;
   z-index: 2;
   cursor: pointer;
@@ -80,7 +97,7 @@ header h1 {
 
 .menu-wrap .hamburger {
   position: absolute;
-  top: 0;
+  top: 25px;
   right: 0;
   z-index: 1;
   width: 25px;
@@ -266,7 +283,7 @@ span {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 25% 0 30%;
+  margin: 25% 0 20%;
   text-align: center;
 }
 .section.section-3 div {
@@ -289,10 +306,27 @@ span {
   font-size: 1em;
 }
 
+.posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 930px;
+  grid-gap: 15px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.posts .post {
+  width: 100%;
+}
+.posts .post img {
+  width: 100%;
+}
+
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   font-size: 0.8em;
+  width: 100%;
+  margin-top: -50px;
 }
 footer img {
   height: 40px;
@@ -371,13 +405,15 @@ footer a {
   .section.section-1 div small:before {
     right: 165px;
   }
-  .section.section-3 {
-    margin-bottom: 15%;
-  }
   .section.section-3 div {
     height: 420px;
     width: 420px;
     padding: 65px;
+  }
+
+  .posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
