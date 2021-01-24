@@ -1,9 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import anime from 'animejs';
 
 import Layout from 'layouts/layout';
 
 export default function Home() {
+  const [opacity, setOpacity] = useState(0);
   useEffect(() => {
     anime.timeline()
       .add({
@@ -15,6 +16,7 @@ export default function Home() {
         duration: 800,
         delay: (el, i) => 600 + 100 * i
       });
+      setOpacity(1);
   });
 
   return (
@@ -28,9 +30,9 @@ export default function Home() {
             </div>
           </div>
           <div className="section section-2">
-            <img src="collage-1.png" alt="Collage 1" className="img-1"></img>
-            <img src="collage-2.png" alt="Collage 2" className="img-2"></img>
-            <img src="collage-3.png" alt="Collage 3" className="img-3"></img>
+            <img style={{ opacity }} src="collage-1.png" alt="Collage 1" className="img-1"></img>
+            <img style={{ opacity }} src="collage-2.png" alt="Collage 2" className="img-2"></img>
+            <img style={{ opacity }} src="collage-3.png" alt="Collage 3" className="img-3"></img>
           </div>
           <div className="section section-3">
             <div>
