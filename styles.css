@@ -255,10 +255,18 @@ span {
 .about-section .about-container div {
   padding: 0 45px 0 50px;
   width: 90%;
+  margin-bottom: 45px;
 }
 .about-section .about-container img {
   height: auto;
   width: 100%;
+}
+.about-section .about-container a {
+  margin-right: 15px;
+}
+.about-section .about-container a img {
+  height: 20px;
+  width: 20px;
 }
 .about-section > div {
   width: 100%;
