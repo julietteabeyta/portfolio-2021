@@ -7,15 +7,6 @@ export default function Home() {
   useEffect(() => {
     anime.timeline()
       .add({
-        targets: 'svg, #header-logo-container img',
-        translateY: [50,0],
-        translateZ: 0,
-        opacity: [0,1],
-        easing: 'easeOutExpo',
-        duration: 800,
-        delay: (el, i) => 600 + 100 * i
-      })
-      .add({
         targets: '.collage',
         translateY: [50,0],
         translateZ: 0,
