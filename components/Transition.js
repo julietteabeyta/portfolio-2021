@@ -11,7 +11,6 @@ const defaultStyle = {
   transition: `opacity ${duration}ms ease-in-out`,
   opacity: 0,
   marginBottom: '150px',
-  marginTop: '100px',
 }
 
 const getTransitionStyles = {
