@@ -387,6 +387,17 @@ span {
   margin: 10px 0;
 }
 
+.contact-section {
+  max-width: 930px;
+  margin: -100px auto 0;
+  display: grid;
+  align-items: center;
+  padding: 25px;
+}
+.contact-section .contact-header h1 {
+  font-size: 4rem;
+}
+
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -507,6 +518,16 @@ footer a {
   }
   .about-section > div {
     flex-direction: row;
+  }
+
+  .contact-section {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-section .contact-header h1 {
+    font-size: 8rem;
+  }
+  .contact-section .contact-subsection {
+    justify-self: center;
   }
 
   .posts {
