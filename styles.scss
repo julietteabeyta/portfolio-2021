@@ -389,7 +389,6 @@ span {
     width: 100%;
       img {
         width: 100%;
-        transition: transform .5s ease;
         margin: 10px 0;
       }
   }
@@ -476,11 +475,6 @@ footer {
       p {
         font-size: 1.5em;
       }
-    }
-  }
-  .post {
-    img:hover {
-      transform: scale(1.05);
     }
   }
   .about-section {
