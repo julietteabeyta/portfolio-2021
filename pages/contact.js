@@ -11,7 +11,7 @@ export default function Contact() {
           <h1><span>Email</span></h1>
           <a href="mailto:hello@whatrhymeswithgod.com"><h3>hello@whatrhymeswithgod.com</h3></a>
           <h1><span>Instagram</span></h1>
-          <a href="https://www.instagram.com/whatrhymeswithgod/?hl=en"><h3>whatrhymeswithgod</h3></a>
+          <a href="https://www.instagram.com/whatrhymeswithgod/?hl=en"><h3>@whatrhymeswithgod</h3></a>
         </div>
       </div>
     </Layout>
