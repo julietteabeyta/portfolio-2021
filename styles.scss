@@ -469,18 +469,6 @@ footer {
         height: 380px;
         width: 380px;
         padding: 35px;
-        &:hover {
-          color: #191919;
-          background-color: #AAB5B0;
-          cursor: url(https://ani.cursors-4u.net/symbols/sym-9/sym831.ani), url(https://ani.cursors-4u.net/symbols/sym-9/sym831.png), default !important;
-        }
-        a {
-          transition: all .05s ease;
-          cursor: url(https://ani.cursors-4u.net/symbols/sym-9/sym831.ani), url(https://ani.cursors-4u.net/symbols/sym-9/sym831.png), default !important;
-          &:hover {
-            color: #E5E5E5;
-          }
-        }
       }
       h1 {
         font-size: 2em;
