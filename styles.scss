@@ -140,6 +140,8 @@ header {
 }
 
 .menu-wrap .toggler:checked + .hamburger > div {
+  background: var(--primary-color);
+
   transform: rotate(135deg);
 }
 
@@ -207,7 +209,7 @@ header {
 
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
-  color: var(--light-color);
+  color: var(--primary-color);
   font-size: 2rem;
   padding: 1rem;
 }
@@ -234,7 +236,7 @@ span {
   width: 100%;
 
   .about-header {
-    color: #E5E5E5;
+    color: var(--light-color);
     text-align: center;
     background-color: #B55A4C;
     border-radius: 100%;
@@ -348,7 +350,7 @@ span {
     }
   }
   &.section-3 {
-    color:  #E5E5E5;
+    color:  var(--light-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -356,7 +358,7 @@ span {
     margin: 25% 0 20%;
     text-align: center;
     div {
-      color: #E5E5E5;
+      color: var(--light-color);
       background-color: #B55A4C;
       border-radius: 100%;
       height: 250px;
@@ -438,7 +440,7 @@ footer {
       height: 1.5px;
       top: 50%;
       margin-top: -0.5px;
-      background: var(--light-color);
+      background: var(--primary-color);
     }
     
     &:before {
@@ -446,12 +448,12 @@ footer {
     }
     &:after {
       right: 0px;
-      background: var(--light-color);
+      background: var(--primary-color);
       transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
     }
     
     &:hover:before {
-      background: var(--light-color);
+      background: var(--primary-color);
       width: 100%;
       transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
     }
