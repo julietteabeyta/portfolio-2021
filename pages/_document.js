@@ -5,6 +5,9 @@ export default class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head />
+                <link rel="icon"
+                    type="image/png"
+                    href="hands.png"></link>
                 <body>
                     <Main />
                     <NextScript />

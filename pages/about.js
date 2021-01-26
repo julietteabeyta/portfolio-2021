@@ -16,7 +16,7 @@ export default function Home() {
             <h3 className="name-header"><span>Neek Abeyta</span></h3>
             <p className="name-subheader">(she/her)</p>
             <p className="name-subheader">Collage Artist</p>
-            <p>Neek operates out of Denver as the designer and curator all of the art produced here.
+            <p>Neek operates out of Denver as the designer and curator of all the art produced here.
             She intends to be loud and unapologetic about the messages depicted in our pieces and hopes to achieve all of your collaging hopes and dreams.
             When she is not collaging, Neek is either at work for Planned Parenthood, going on mountain adventures, or antiquing her little heart out. She is also
             the loving mother of the world's biggest nuisance of a cat called Nano.</p>
