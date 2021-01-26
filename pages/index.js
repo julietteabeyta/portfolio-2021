@@ -36,8 +36,8 @@ export default function Home() {
             <div>
               <h1><span >Meet us!</span></h1>
               <p>We are <span >Neek & Junie</span> and we are here to make your super neat-o retro
-                art dreams come true. Learn more about us and <span>WRWG</span> over {' '}
-                <a href="/about">here</a> and talk to us <a href="/contact">here</a>! </p>
+                art dreams come true. If you'd like to learn more about us and <span>WRWG</span>, check out our {' '}
+                <a href="/about">about page</a>. If you wanna talk shop, art, or music recommendations, <a href="/contact">contatct us</a>!</p>
             </div>
           </div>
         </div>
