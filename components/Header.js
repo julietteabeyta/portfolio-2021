@@ -30,8 +30,8 @@ export default function Header() {
             <div>
               <ul>
                 <li><Link href="/"><a>Home</a></Link></li>
-                <li><a href="https://www.etsy.com/shop/WhatRhymesWithGod" target="_blank" rel="noreferrer">Shop</a></li>
-                <li><a href="https://teespring.com/stores/my-store-10281756" target="_blank" rel="noreferrer">Merch</a></li>
+                <li><a href="https://www.etsy.com/shop/WhatRhymesWithGod" target="_blank" rel="noreferrer">Shop Art</a></li>
+                <li><a href="https://teespring.com/stores/my-store-10281756" target="_blank" rel="noreferrer">Shop Wearables</a></li>
                 <li><Link href="/about"><a>About</a></Link></li>
                 <li><Link href="/archive"><a>Archive</a></Link></li>
                 <li><Link href="/contact"><a>Contact</a></Link></li>
