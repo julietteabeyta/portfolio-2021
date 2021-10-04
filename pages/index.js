@@ -11,6 +11,20 @@ export default function Home() {
   });
   return (
     <Layout>
+      <div className='subtext'>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta varius est 
+          a laoreet. Integer sit amet euismod mi. Phasellus in est sit amet tellus volutpat 
+          semper.
+        </div>
+      </div>
+      <div className='sidetext'>
+        <div>
+          <p>
+            [they/them]
+          </p>
+        </div>
+      </div>
       <div className="header">
         <div>
           <h2 className="header-img-text" ref={ text1 }>Juliette</h2>

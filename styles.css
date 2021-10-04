@@ -3,6 +3,7 @@
 :root {
   --primary-color: #1F2022;
   --overlay-color: rgba(170, 181, 176 , 0.95);
+  --medium-color: #9E9E9E;
   --light-color: #E5E5E5;
   --white-color: #FFF;
   --menu-speed: 0.75s;
@@ -23,7 +24,6 @@ body > div {
 }
 
 main {
-  margin-top: -25px;
   min-height: 100%;
   position: relative;
 }
@@ -36,28 +36,83 @@ a {
 }
 
 .header {
-  margin: 110px 50px;
+  margin: 110px 60px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  justify-items: center;
+  grid-template-columns: 4fr 5fr;
+  align-items: center;
 }
 .header div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header div {
+  max-width: 720px;
+}
+.header div p {
+  font-size: 2rem;
+}
+
+.subtext {
+  width: 100%;
+  height: 630px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+.subtext > div {
+  max-width: 45%;
+  color: var(--medium-color);
   position: relative;
+  top: -70px;
+}
+.subtext > div::after {
+  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta varius est a laoreet; Integer sit amet euismod mi. Phasellus in est sit amet tellus volutpat semper.";
+  position: absolute;
+  transform: rotate(180deg);
+  width: 100%;
+  bottom: 0;
+  left: -50px;
+}
+
+.sidetext {
+  width: 100%;
+  height: 460px;
+  position: absolute;
+}
+.sidetext > div {
+  color: var(--medium-color);
+  position: relative;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.sidetext > div p {
+  position: absolute;
+  transform: rotate(-90deg);
+}
+.sidetext > div::after {
+  content: "[they/them]";
+  position: absolute;
+  transform: rotate(90deg);
+  right: 0;
 }
 
 .header-img {
   clip-path: path("M210.5 160.5C210.5 204.737 198.713 244.764 179.682 273.716C160.648 302.672 134.411 320.5 105.5 320.5C76.5895 320.5 50.3517 302.672 31.3181 273.716C12.2872 244.764 0.5 204.737 0.5 160.5C0.5 116.263 12.2872 76.2362 31.3181 47.284C50.3517 18.3276 76.5895 0.5 105.5 0.5C134.411 0.5 160.648 18.3276 179.682 47.284C198.713 76.2362 210.5 116.263 210.5 160.5Z");
   height: 345px;
   z-index: 0;
-  position: absolute;
-  left: 31.5px;
+  margin-top: 100px;
+  margin-left: 32px;
 }
 
 .header-img-text {
   font-size: 4rem;
   text-transform: uppercase;
   color: var(--white-color);
-  position: relative;
+  margin-top: -260px;
 }
 
 .char {
@@ -65,7 +120,6 @@ a {
   offset-path: path("M272.5 195.5C272.5 249.396 257.246 298.168 232.61 333.453C207.973 368.74 173.985 390.5 136.5 390.5C99.0151 390.5 65.0272 368.74 40.3899 333.453C15.7537 298.168 0.5 249.396 0.5 195.5C0.5 141.604 15.7537 92.8317 40.3899 57.5469C65.0272 22.2604 99.0151 0.5 136.5 0.5C173.985 0.5 207.973 22.2604 232.61 57.5469C257.246 92.8317 272.5 141.604 272.5 195.5Z");
   offset-distance: var(--offset);
   position: absolute;
-  top: -35px;
   animation: move1 30s infinite linear var(--delay, 0ms);
   vertical-align: top;
 }
@@ -94,7 +148,7 @@ a {
   --offset: calc(8 * 3rem);
 }
 
-h2:nth-child(2) .char {
+.header-img-text:nth-child(2) .char {
   offset-distance: calc(var(--offset) + 525px);
   animation: move2 30s infinite linear var(--delay, 0ms);
 }
