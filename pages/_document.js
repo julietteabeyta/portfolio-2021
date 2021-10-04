@@ -5,10 +5,10 @@ export default class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head />
-                <meta name="description" content="What Rhymes With God is a small collage studio offering purchasable art and wearable merchandise."/>
+                <meta name="description" content="Juliette Spencer is a full-stack developer living their best life in Los Angeles."/>
                 <link rel="icon"
-                    type="image/png"
-                    href="hands.png"></link>
+                    type="image/jpg"
+                    href="juliette.jpg"></link>
                 <body>
                     <Main />
                     <NextScript />
