@@ -49,8 +49,15 @@ a {
 .header div {
   max-width: 720px;
 }
+.header div:nth-child(2) {
+  padding-right: 50px;
+}
 .header div p {
   font-size: 2rem;
+}
+
+.subtext, .sidetext {
+  display: block;
 }
 
 .subtext {
@@ -67,12 +74,12 @@ a {
   top: -70px;
 }
 .subtext > div::after {
-  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta varius est a laoreet; Integer sit amet euismod mi. Phasellus in est sit amet tellus volutpat semper.";
+  content: "Your paint is the way you make us feel like we're enough.";
   position: absolute;
   transform: rotate(180deg);
   width: 100%;
   bottom: 0;
-  left: -50px;
+  left: -16px;
 }
 
 .sidetext {
@@ -161,6 +168,27 @@ a {
 @keyframes move2 {
   100% {
     offset-distance: calc(var(--offset) + 1572px);
+  }
+}
+@media screen and (max-width: 992px) {
+  .header {
+    display: flex;
+  }
+  .header div:first-child {
+    display: none;
+  }
+  .header div {
+    max-width: 100%;
+  }
+  .header div:nth-child(2) {
+    padding: 0;
+  }
+  .header div:nth-child(2) p {
+    font-size: 1.5rem;
+  }
+
+  .subtext, .sidetext {
+    display: none;
   }
 }
 

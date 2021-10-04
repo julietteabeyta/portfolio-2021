@@ -49,10 +49,17 @@ a {
   }
   div {
     max-width: 720px;
+    &:nth-child(2) {
+      padding-right: 50px;
+    }
     p {
       font-size: 2rem;
     }
   }
+}
+
+.subtext, .sidetext {
+  display: block;
 }
 
 .subtext {
@@ -67,12 +74,12 @@ a {
     position: relative;
     top: -70px;
     &::after {
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta varius est a laoreet; Integer sit amet euismod mi. Phasellus in est sit amet tellus volutpat semper.';
+      content: "Your paint is the way you make us feel like we're enough.";
       position: absolute;
       transform: rotate(180deg);
       width: 100%;
       bottom: 0;
-      left: -50px;
+      left: -16px;
     }
   }
 }
@@ -170,4 +177,25 @@ a {
 	100% {
 		offset-distance: calc(var(--offset) + 1572px);
 	}
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    display: flex;
+    div:first-child {
+      display: none;
+    }
+    div {
+      &:nth-child(2) {
+        padding: 0;
+        p {
+          font-size: 1.5rem;
+        }
+      }
+      max-width: 100%;
+    }
+  }
+  .subtext, .sidetext {
+    display: none;
+  }
 }
