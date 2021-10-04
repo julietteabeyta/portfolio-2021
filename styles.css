@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 @font-face {
   font-family: SilkSerif;
   src: url(fonts/font.woff);
@@ -20,7 +21,7 @@ html, body {
 body {
   background: var(--light-color);
   color: var(--primary-color);
-  font-family: "SilkSerif", sans-serif;
+  font-family: "SilkSerif", serif;
   overflow-x: hidden;
   height: 100vh;
   width: 100vw;
@@ -65,6 +66,7 @@ a {
 
 .subtext, .sidetext {
   display: block;
+  font-family: "Lato", sans-serif;
 }
 
 .subtext {
@@ -72,6 +74,7 @@ a {
   display: flex;
   justify-content: center;
   position: absolute;
+  text-transform: uppercase;
 }
 .subtext > div {
   max-width: 45%;
@@ -88,7 +91,7 @@ a {
   transform: rotate(180deg);
   width: 100%;
   bottom: 0;
-  left: -16px;
+  left: -24px;
 }
 .subtext.projects-subtext {
   color: var(--white-color);
