@@ -9,7 +9,7 @@ export default function Introduction() {
   });
   return (
     <Fragment>
-      <div className='subtext'>
+      <div className='header-subtext subtext'>
         <div>
         You're an artist and your canvas is the lives of those you love.
         </div>
@@ -17,7 +17,7 @@ export default function Introduction() {
       <div className='sidetext'>
         <div>
           <p>
-            [they/them]
+            [they / them]
           </p>
         </div>
       </div>

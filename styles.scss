@@ -8,6 +8,7 @@
   --medium-color: #9E9E9E;
   --light-color: #E5E5E5;
   --white-color: #FFF;
+  --light-green: #86928A;
   --menu-speed: 0.75s;
 }
 
@@ -20,6 +21,8 @@ body {
   color: var(--primary-color);
   font-family: 'Lato', sans-serif;
   overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
   > div {
     height: 100%;
   }
@@ -35,6 +38,7 @@ main {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 .header {
@@ -64,23 +68,32 @@ a {
 
 .subtext {
   width: 100%;
-  height: 630px;
   display: flex;
   justify-content: center;
   position: absolute;
   >div {
     max-width: 45%;
-    color: var(--medium-color);
     position: relative;
+  }
+  &.header-subtext {
+    color: var(--medium-color);
+    height: 630px;
     top: -70px;
-    &::after {
-      content: "Your paint is the way you make us feel like we're enough.";
-      position: absolute;
-      transform: rotate(180deg);
-      width: 100%;
-      bottom: 0;
-      left: -16px;
+    > div {
+      &::after {
+        content: "Your paint is the way you make us feel like we're enough.";
+        position: absolute;
+        transform: rotate(180deg);
+        width: 100%;
+        bottom: 0;
+        left: -16px;
+      }
     }
+  }
+  &.projects-subtext {
+    color: var(--white-color);
+    top: 30px;
+    left: -50px;
   }
 }
 
@@ -164,6 +177,38 @@ a {
 			offset-distance: calc(var(--offset) + 525px);
 	animation: move2 30s infinite linear var(--delay, 0ms);
     }
+  }
+}
+
+.projects-container {
+  margin-top: 160px;
+  margin-left: -8px;
+  padding: 100px 50px;
+  width: 100vw;
+  display: flex;
+  font-weight: 700;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--light-green);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.project-name-a {
+  position: relative;
+}
+
+.project-name-a,
+.project-name-b {
+  display: flex;
+  color: var(--primary-color);
+  white-space: nowrap;
+  font-size: 4rem;
+  transition: all 0s;
+  &:before {
+    content: attr(pseudo-content);
+    color: var(--white-color);
+    right: 100%;
   }
 }
 
