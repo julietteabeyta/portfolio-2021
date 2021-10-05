@@ -13,6 +13,7 @@
   --light-color: #E5E5E5;
   --white-color: #FFF;
   --light-green: #86928A;
+  --green-color: #6FA982;
   --menu-speed: 0.75s;
 }
 
@@ -103,6 +104,11 @@ a {
     top: 30px;
     left: -50px;
   }
+  &.contact-subtext {
+    color: var(--green-color);
+    top: 30px;
+    left: -5px;
+  }
 }
 
 .sidetext {
@@ -190,7 +196,6 @@ a {
 
 .projects-container {
   margin-top: 160px;
-  margin-left: -8px;
   padding: 100px 50px;
   width: 100vw;
   display: flex;
@@ -219,6 +224,57 @@ a {
     color: var(--white-color);
     right: 100%;
   }
+}
+
+.contact-container {
+  position: relative;
+  padding: 100px 50px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.contact-cta {
+  display: flex;
+  color: var(--primary-color);
+  font-size: 3rem;
+}
+
+.contact-method-container {
+  margin-top: 5px;
+  max-width: 500px;
+}
+
+.contact-method {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  position: relative;
+  a {
+    align-self: center;
+    justify-self: end;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: var(--medium-color);
+    bottom: 0;
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-transform: uppercase;
+  font-size: .8rem;
+  .site-work-by {
+    justify-self: center;
+  }
+  .site-year {
+    justify-self: end;
+  }
+  padding: 0 50px;
 }
 
 @keyframes move1 {
@@ -251,10 +307,23 @@ a {
   }
   .project-name-a,
   .project-name-b {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 50px;
 }
   .header-subtext, .sidetext {
     display: none;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  .contact-cta {
+    display: none;
+  }
+
+  footer {
+    padding: 0 20px;
   }
 }

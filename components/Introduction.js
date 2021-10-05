@@ -29,7 +29,7 @@ export default function Introduction() {
         </div>
         <div>
           <p>
-            Juliette Spencer is a full stack developer based in Los Angeles, California.
+            Juliette Abeyta is a full stack developer based in Los Angeles, California.
             They work on a multidisciplinary team of engineers at EVgo. They're very good
             at writing code, bein' a sweetie pie, and cooking vegan food. 
           </p>

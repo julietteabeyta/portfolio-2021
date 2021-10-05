@@ -11,6 +11,7 @@
   --light-color: #E5E5E5;
   --white-color: #FFF;
   --light-green: #86928A;
+  --green-color: #6FA982;
   --menu-speed: 0.75s;
 }
 
@@ -100,6 +101,11 @@ a {
   top: 30px;
   left: -50px;
 }
+.subtext.contact-subtext {
+  color: var(--green-color);
+  top: 30px;
+  left: -5px;
+}
 
 .sidetext {
   width: 100%;
@@ -181,7 +187,6 @@ a {
 
 .projects-container {
   margin-top: 160px;
-  margin-left: -8px;
   padding: 100px 50px;
   width: 100vw;
   display: flex;
@@ -213,6 +218,57 @@ a {
   right: 100%;
 }
 
+.contact-container {
+  position: relative;
+  padding: 100px 50px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.contact-cta {
+  display: flex;
+  color: var(--primary-color);
+  font-size: 3rem;
+}
+
+.contact-method-container {
+  margin-top: 5px;
+  max-width: 500px;
+}
+
+.contact-method {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  position: relative;
+}
+.contact-method a {
+  align-self: center;
+  justify-self: end;
+}
+.contact-method::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: var(--medium-color);
+  bottom: 0;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 0 50px;
+}
+footer .site-work-by {
+  justify-self: center;
+}
+footer .site-year {
+  justify-self: end;
+}
+
 @keyframes move1 {
   100% {
     offset-distance: calc(var(--offset) + 1049px);
@@ -242,12 +298,25 @@ a {
 
   .project-name-a,
 .project-name-b {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 50px;
   }
 
   .header-subtext, .sidetext {
     display: none;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  .contact-cta {
+    display: none;
+  }
+
+  footer {
+    padding: 0 20px;
   }
 }
 
