@@ -4,7 +4,7 @@ import vertex from 'GLSL/vertex.glsl'
 import fragment from 'GLSL/fragment.glsl'
 
 export default function Introduction() {
-  let setOpacity = () => {};
+  let setActive = () => {};
   useEffect(() => {
     const baseMaterial = new THREE.ShaderMaterial({
       vertexShader: vertex,
@@ -15,6 +15,7 @@ export default function Introduction() {
         uTime: { value: 1.0 },
         uTexture: { value: null },
         uOpacity: { value: 0.0 },
+        uHover: { value: 0.0 },
       },
       side: THREE.DoubleSide
     });
@@ -28,11 +29,11 @@ export default function Introduction() {
     camera.position.z = 2;
     const scene = new THREE.Scene();
     const imgURLs = [
-      // 'wrwg-case-study.png',
-      // 'spacex-case-study.png',
+      'wrwg-case-study.png',
+      'spacex-case-study.png',
       'task-case-study.png',
-      // 'fibonacci-case-study.png',
-      // 'halloween-case-study.png',
+      'fibonacci-case-study.png',
+      'halloween-case-study.png',
     ];
     const textures = imgURLs.map(url => new THREE.TextureLoader().load(url));
 
@@ -45,7 +46,7 @@ export default function Introduction() {
     }
 
     const createMeshes = () => {
-      textures.map((texture) => {
+      textures.forEach((texture) => {
         const instancedMaterial = baseMaterial.clone();
         instancedMaterial.uniforms.uTexture.value = texture;
         const ratio = texture.image.width / texture.image.height;
@@ -64,9 +65,12 @@ export default function Introduction() {
       }
     };
 
-    setOpacity = (name, opacity) => {
+    setActive = (name, opacity, hover) => {
       const mesh = scene.children.find(child => child.name === name);
-      if (mesh) mesh.material.uniforms.uOpacity.value = opacity;
+      if (mesh) {
+        mesh.material.uniforms.uOpacity.value = opacity;
+        mesh.material.uniforms.uHover.value = hover;
+      }
     };
   });
 
@@ -84,8 +88,8 @@ export default function Introduction() {
             href="https://whatrhymeswithgod.com"
             target="_blank"
             rel="noreferrer"
-            onMouseEnter={ () => setOpacity('wrwg', 1.0) }
-            onMouseLeave={ () => setOpacity('wrwg', 0.0) }
+            onMouseEnter={ () => setActive('wrwg', 1.0, 0.1) }
+            onMouseLeave={ () => setActive('wrwg', 0.0, 0.0) }
             >
             <div
               className="project-name-a"
@@ -98,8 +102,8 @@ export default function Introduction() {
             href="https://spacex.juliette.dev"
             target="_blank"
             rel="noreferrer"
-            onMouseEnter={ () => setOpacity('spacex', 1.0) }
-            onMouseLeave={ () => setOpacity('spacex', 0.0) }
+            onMouseEnter={ () => setActive('spacex', 1.0, 0.1) }
+            onMouseLeave={ () => setActive('spacex', 0.0, 0.0) }
             >
             <div
               className="project-name-b"
@@ -112,8 +116,8 @@ export default function Introduction() {
             href="https://tasktracker.juliette.dev"
             target="_blank"
             rel="noreferrer"
-            onMouseEnter={ () => setOpacity('task', 1.0) }
-            onMouseLeave={ () => setOpacity('task', 0.0) }
+            onMouseEnter={ () => setActive('task', 1.0, 0.1) }
+            onMouseLeave={ () => setActive('task', 0.0, 0.0) }
             >
             <div
               className="project-name-a"
@@ -126,8 +130,8 @@ export default function Introduction() {
             href="https://fibonacci.juliette.dev"
             target="_blank"
             rel="noreferrer"
-            onMouseEnter={ () => setOpacity('fibonacci', 1.0) }
-            onMouseLeave={ () => setOpacity('fibonacci', 0.0) }
+            onMouseEnter={ () => setActive('fibonacci', 1.0, 0.1) }
+            onMouseLeave={ () => setActive('fibonacci', 0.0, 0.0) }
             >
             <div
               className="project-name-b"
@@ -140,8 +144,8 @@ export default function Introduction() {
             href="https://halloween.juliette.dev"
             target="_blank"
             rel="noreferrer"
-            onMouseEnter={ () => setOpacity('halloween', 1.0) }
-            onMouseLeave={ () => setOpacity('halloween', 0.0) }
+            onMouseEnter={ () => setActive('halloween', 1.0, 0.1) }
+            onMouseLeave={ () => setActive('halloween', 0.0, 0.0) }
             >
             <div
               className="project-name-a"
