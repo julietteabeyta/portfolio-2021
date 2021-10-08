@@ -4,8 +4,9 @@ import vertex from 'GLSL/vertex.glsl'
 import fragment from 'GLSL/fragment.glsl'
 
 export default function Introduction() {
-  let setActive = () => {};
   useEffect(() => {
+    let states = {};
+    const lerp = (min, max, theta) => min * (1 - theta) + max * theta;
     const baseMaterial = new THREE.ShaderMaterial({
       vertexShader: vertex,
       fragmentShader: fragment,
@@ -26,7 +27,7 @@ export default function Introduction() {
     renderer.setPixelRatio(window.devicePixelRatio);
     const clock = new THREE.Clock();
     const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-    camera.position.z = 2;
+    camera.position.z = 2.6;
     const scene = new THREE.Scene();
     const imgURLs = [
       'wrwg-case-study.png',
@@ -36,10 +37,25 @@ export default function Introduction() {
       'halloween-case-study.png',
     ];
     const textures = imgURLs.map(url => new THREE.TextureLoader().load(url));
-
+    const els = document.getElementsByClassName('project-link')
+    Array.from(els).forEach(el => {
+      el.addEventListener('mouseover', () => {
+        const elName = el.name
+        states[elName].opacity = 1;
+        states[elName].hover = 1;
+      });
+      el.addEventListener('mouseout', () => {
+        const elName = el.name
+        states[elName].opacity = 0;
+        states[elName].hover = 0;
+      });
+    });
     const render = () => {
       scene.children.forEach(child => {
         child.material.uniforms.uTime.value = clock.getElapsedTime();
+        const stateToTweenTo = states[child.name];
+        child.material.uniforms.uOpacity.value = lerp(child.material.uniforms.uOpacity.value, stateToTweenTo.opacity, .2);
+        child.material.uniforms.uHover.value = lerp(child.material.uniforms.uHover.value, stateToTweenTo.hover, .2);
       });
       renderer.render(scene, camera);
       requestAnimationFrame(render);
@@ -56,20 +72,15 @@ export default function Introduction() {
         mesh.name = name;
         scene.add( mesh );
       });
+      scene.children.forEach((mesh) => {
+        states[mesh.name] = { opacity: 0.0, hover: 0.0 };
+      });
       render();
     }
 
     THREE.DefaultLoadingManager.onProgress = (item, loaded, total) => {
       if (loaded === total) {
         createMeshes();
-      }
-    };
-
-    setActive = (name, opacity, hover) => {
-      const mesh = scene.children.find(child => child.name === name);
-      if (mesh) {
-        mesh.material.uniforms.uOpacity.value = opacity;
-        mesh.material.uniforms.uHover.value = hover;
       }
     };
   });
@@ -85,11 +96,11 @@ export default function Introduction() {
         </div>
         <div className="projects-list">
           <a
+            className="project-link"
             href="https://whatrhymeswithgod.com"
             target="_blank"
             rel="noreferrer"
-            onMouseEnter={ () => setActive('wrwg', 1.0, 0.1) }
-            onMouseLeave={ () => setActive('wrwg', 0.0, 0.0) }
+            name="wrwg"
             >
             <div
               className="project-name-a"
@@ -99,11 +110,11 @@ export default function Introduction() {
             </div>
           </a>
           <a
+            className="project-link"
             href="https://spacex.juliette.dev"
             target="_blank"
             rel="noreferrer"
-            onMouseEnter={ () => setActive('spacex', 1.0, 0.1) }
-            onMouseLeave={ () => setActive('spacex', 0.0, 0.0) }
+            name="spacex"
             >
             <div
               className="project-name-b"
@@ -113,11 +124,11 @@ export default function Introduction() {
             </div>
           </a>
           <a
+            className="project-link"
             href="https://tasktracker.juliette.dev"
             target="_blank"
             rel="noreferrer"
-            onMouseEnter={ () => setActive('task', 1.0, 0.1) }
-            onMouseLeave={ () => setActive('task', 0.0, 0.0) }
+            name="task"
             >
             <div
               className="project-name-a"
@@ -127,11 +138,11 @@ export default function Introduction() {
             </div>
           </a>
           <a
+            className="project-link"
             href="https://fibonacci.juliette.dev"
             target="_blank"
             rel="noreferrer"
-            onMouseEnter={ () => setActive('fibonacci', 1.0, 0.1) }
-            onMouseLeave={ () => setActive('fibonacci', 0.0, 0.0) }
+            name="fibonacci"
             >
             <div
               className="project-name-b"
@@ -141,11 +152,11 @@ export default function Introduction() {
             </div>
           </a>
           <a
+            className="project-link"
             href="https://halloween.juliette.dev"
             target="_blank"
             rel="noreferrer"
-            onMouseEnter={ () => setActive('halloween', 1.0, 0.1) }
-            onMouseLeave={ () => setActive('halloween', 0.0, 0.0) }
+            name="halloween"
             >
             <div
               className="project-name-a"
