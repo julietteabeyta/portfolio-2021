@@ -27,7 +27,7 @@ export default function Introduction() {
     renderer.setPixelRatio(window.devicePixelRatio);
     const clock = new THREE.Clock();
     const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-    camera.position.z = 2.6;
+    camera.position.z = 1.7;
     const scene = new THREE.Scene();
     const imgURLs = [
       'wrwg-case-study.png',
@@ -41,8 +41,8 @@ export default function Introduction() {
     Array.from(els).forEach(el => {
       el.addEventListener('mouseover', () => {
         const elName = el.name
-        states[elName].opacity = 1;
-        states[elName].hover = 1;
+        states[elName].opacity = 1.0;
+        states[elName].hover = 0.1;
       });
       el.addEventListener('mouseout', () => {
         const elName = el.name
