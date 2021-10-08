@@ -85,6 +85,13 @@ export default function Introduction() {
         createMeshes();
       }
     };
+    const handleResize = () => {
+      const container = document.getElementById('projects-container');
+      renderer.setSize(container.offsetWidth, container.offsetHeight);
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+    };
+    window.addEventListener('resize', handleResize);
   });
 
   return (
