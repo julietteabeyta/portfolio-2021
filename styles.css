@@ -64,12 +64,15 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-self: end;
+  margin-right: 125px;
 }
 .header div {
   max-width: 720px;
 }
 .header div:nth-child(2) {
   padding-right: 50px;
+  margin-top: 50px;
 }
 .header div p {
   font-size: 2rem;
@@ -193,6 +196,41 @@ a {
   animation: move2 30s infinite linear var(--delay, 0ms);
 }
 
+.full-stack-string {
+  position: relative;
+}
+.full-stack-string::after {
+  content: url("public/circle.svg");
+  position: absolute;
+  width: 120%;
+  bottom: -30%;
+  left: -8%;
+}
+
+.writing-code-string {
+  position: relative;
+}
+.writing-code-string::after {
+  content: url("public/underline.svg");
+  position: absolute;
+  width: 100%;
+  bottom: -35%;
+  left: 0;
+}
+
+.about-container {
+  position: relative;
+}
+
+.header-svg {
+  position: absolute;
+}
+.header-svg.arrow {
+  display: block;
+  top: 20px;
+  left: -190px;
+}
+
 .projects-container {
   margin-top: 160px;
   padding: 100px 50px;
@@ -309,6 +347,10 @@ footer .site-year {
   }
   .header div:nth-child(2) p {
     font-size: 1.5rem;
+  }
+
+  .header-svg.arrow {
+    display: none;
   }
 
   .project-name-a,

@@ -65,11 +65,14 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    justify-self: end;
+    margin-right: 125px;
   }
   div {
     max-width: 720px;
     &:nth-child(2) {
       padding-right: 50px;
+      margin-top: 50px;
     }
     p {
       font-size: 2rem;
@@ -152,7 +155,6 @@ a {
   margin-left: 32px;
 }
 
-
 .header-img-text {
 	font-size: 4rem;
 	text-transform: uppercase;
@@ -199,6 +201,41 @@ a {
 			offset-distance: calc(var(--offset) + 525px);
 	animation: move2 30s infinite linear var(--delay, 0ms);
     }
+  }
+}
+
+.full-stack-string {
+  position: relative;
+  &::after {
+    content: url('public/circle.svg');
+    position: absolute;
+    width: 120%;
+    bottom: -30%;
+    left: -8%;
+  }
+}
+
+.writing-code-string {
+  position: relative;
+  &::after {
+    content: url('public/underline.svg');
+    position: absolute;
+    width: 100%;
+    bottom: -35%;
+    left: 0;
+  }
+}
+
+.about-container {
+  position: relative;
+}
+
+.header-svg {
+  position: absolute;
+  &.arrow {
+    display: block;
+    top: 20px;
+    left: -190px;
   }
 }
 
@@ -319,6 +356,10 @@ footer {
       }
       max-width: 100%;
     }
+  }
+
+  .header-svg.arrow {
+    display: none;
   }
   .project-name-a,
   .project-name-b {
