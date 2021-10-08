@@ -25,6 +25,7 @@ export default function Introduction() {
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
     renderer.setClearColor(0xffffff, 0);
     renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
     const clock = new THREE.Clock();
     const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
     camera.position.z = 1.7;
@@ -65,7 +66,8 @@ export default function Introduction() {
       textures.forEach((texture) => {
         const instancedMaterial = baseMaterial.clone();
         instancedMaterial.uniforms.uTexture.value = texture;
-        const ratio = texture.image.width / texture.image.height;
+
+        const ratio = texture.image.naturalWidth / texture.image.naturalHeight;
         const geometry = new THREE.PlaneGeometry( ratio / 2, 1, 20, 20 );
         const name = texture.image.currentSrc.split('/')[3].split('-')[0];
         const mesh = new THREE.Mesh( geometry, instancedMaterial );
