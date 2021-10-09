@@ -332,6 +332,17 @@ footer .site-year {
     offset-distance: calc(var(--offset) + 1572px);
   }
 }
+@media screen and (max-width: 1200px) {
+  .header div:first-child {
+    margin-right: 75px;
+  }
+
+  .header-svg.arrow {
+    display: block;
+    left: -155px;
+    width: 30%;
+  }
+}
 @media screen and (max-width: 992px) {
   .header {
     display: flex;
