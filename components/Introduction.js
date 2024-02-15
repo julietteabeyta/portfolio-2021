@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function Introduction() {
   const text1 = useRef(null);
@@ -34,7 +34,7 @@ export default function Introduction() {
             at <span className="writing-code-string">writing code</span>, bein' a sweetie pie, and cooking vegan food.
           </p>
           <svg className="header-svg arrow" width="188" height="53" viewBox="0 0 188 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M186.5 32.0001C161.803 -7.14034 83.5 -15.0822 1 46.8833M1 46.8833L30.5 51.5M1 46.8833V22.5333" stroke="#86928A" stroke-width="2"/>
+            <path d="M186.5 32.0001C161.803 -7.14034 83.5 -15.0822 1 46.8833M1 46.8833L30.5 51.5M1 46.8833V22.5333" stroke="#86928A" strokeWidth="2"/>
           </svg>
         </div>
       </div>

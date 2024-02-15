@@ -118,7 +118,7 @@ export default function Introduction() {
               What Rhymes With God
             </div>
           </a>
-          <a
+          {/* <a
             className="project-link"
             href="https://spacex.juliette.dev"
             target="_blank"
@@ -131,7 +131,7 @@ export default function Introduction() {
             >
               SpaceX Launches
             </div>
-          </a>
+          </a> */}
           <a
             className="project-link"
             href="https://tasktracker.juliette.dev"

@@ -152,6 +152,7 @@ a {
 }
 
 .header-img-text {
+  z-index: 0;
   font-size: 4rem;
   text-transform: uppercase;
   color: var(--white-color);
@@ -336,7 +337,6 @@ footer .site-year {
   .header div:first-child {
     margin-right: 75px;
   }
-
   .header-svg.arrow {
     display: block;
     left: -155px;
@@ -359,30 +359,24 @@ footer .site-year {
   .header div:nth-child(2) p {
     font-size: 1.5rem;
   }
-
   .header-svg.arrow {
     display: none;
   }
-
   .project-name-a,
-.project-name-b {
+  .project-name-b {
     font-size: 1.5rem;
     line-height: 50px;
   }
-
   .header-subtext, .sidetext {
     display: none;
   }
-
   .contact-container {
     grid-template-columns: 1fr;
     align-items: center;
   }
-
   .contact-cta {
     display: none;
   }
-
   footer {
     padding: 0 20px;
   }
