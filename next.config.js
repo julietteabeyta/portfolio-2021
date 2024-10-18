@@ -1,4 +1,5 @@
 module.exports = {
+  output: 'export',
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.(glsl|vs|fs|vert|frag)$/,
