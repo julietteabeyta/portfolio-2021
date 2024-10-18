@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
 @font-face {
   font-family: SilkSerif;
-  src: url(fonts/font.woff);
+  src: url(/fonts/font.woff);
   font-weight: light;
+  font-display: swap;
 }
 :root {
   --primary-color: #1F2022;
@@ -201,7 +202,7 @@ a {
   position: relative;
 }
 .full-stack-string::after {
-  content: url("public/circle.svg");
+  content: url("/circle.svg");
   position: absolute;
   width: 120%;
   bottom: -30%;
@@ -212,7 +213,7 @@ a {
   position: relative;
 }
 .writing-code-string::after {
-  content: url("public/underline.svg");
+  content: url("/underline.svg");
   position: absolute;
   width: 100%;
   bottom: -35%;

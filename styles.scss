@@ -1,7 +1,8 @@
 @font-face {
   font-family: SilkSerif;
-  src: url(fonts/font.woff);
+  src: url(/fonts/font.woff);
   font-weight: light;
+  font-display: swap;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
@@ -208,7 +209,7 @@ a {
 .full-stack-string {
   position: relative;
   &::after {
-    content: url('public/circle.svg');
+    content: url('/circle.svg');
     position: absolute;
     width: 120%;
     bottom: -30%;
@@ -219,7 +220,7 @@ a {
 .writing-code-string {
   position: relative;
   &::after {
-    content: url('public/underline.svg');
+    content: url('/underline.svg');
     position: absolute;
     width: 100%;
     bottom: -35%;
