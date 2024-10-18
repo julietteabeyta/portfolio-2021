@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Layout>
       <Introduction />
-      <Projects />
+      {/* <Projects /> */}
       <Contact />
     </Layout>
   );

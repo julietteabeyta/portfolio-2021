@@ -113,8 +113,8 @@ a {
   left: -50px;
 }
 .subtext.contact-subtext {
-  color: var(--green-color);
-  top: 30px;
+  color: var(--light-color);
+  top: 40px;
   left: -5px;
 }
 
@@ -271,15 +271,17 @@ a {
 
 .contact-container {
   position: relative;
-  padding: 100px 50px 0px;
+  margin-top: 160px;
+  padding: 125px 50px 100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
+  background: var(--light-green);
+  color: var(--light-color);
 }
 
 .contact-cta {
   display: flex;
-  color: var(--primary-color);
   font-size: 3rem;
 }
 
