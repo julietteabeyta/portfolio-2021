@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@babel/preset-env": "^7.23.9",
+    "@netlify/plugin-nextjs": "^5.8.0",
     "animejs": "^3.2.2",
     "glslify-loader": "^2.0.0",
     "next": "^14.1.0",
