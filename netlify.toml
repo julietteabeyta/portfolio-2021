@@ -2,7 +2,7 @@
   command = "npm run build && npm run output"
   publish = "out"
 
-[plugins]
+[[plugins]]
   package = "@netlify/plugin-nextjs"
 
 [build.environment]
